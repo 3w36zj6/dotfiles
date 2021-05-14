@@ -1,3 +1,5 @@
 **
 !.gitignore
 !.bashrc
+!.pandoc-crossref/
+!.pandoc-crossref/**
