@@ -3,3 +3,4 @@
 !.bashrc
 !.pandoc-crossref/
 !.pandoc-crossref/**
+!.p10k.zsh
