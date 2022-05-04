@@ -927,6 +927,7 @@
   # typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '
 
   ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
+  typeset -g POWERLEVEL9K_VIRTUALENV_GENERIC_NAMES=()
   # Python virtual environment color.
   typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=0
   typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND=4
@@ -1704,5 +1705,3 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
-
-typeset -g POWERLEVEL9K_VIRTUALENV_GENERIC_NAMES=()
