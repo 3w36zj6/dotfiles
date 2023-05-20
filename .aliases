@@ -10,3 +10,6 @@ alias diff='delta'
 
 # https://github.com/BurntSushi/ripgrep
 alias grep='rg'
+
+# https://github.com/sharkdp/fd
+alias find='fd'
