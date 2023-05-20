@@ -4,3 +4,6 @@ alias tree='lsd --tree'
 
 # https://github.com/sharkdp/bat
 alias cat='bat'
+
+# https://github.com/dandavison/delta
+alias diff='delta'
