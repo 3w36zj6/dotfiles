@@ -1,3 +1,4 @@
 **
 !.gitignore
 !.bashrc
+!.p10k.zsh
