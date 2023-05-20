@@ -1,0 +1,3 @@
+# https://github.com/lsd-rs/lsd
+alias ls='lsd'
+alias tree='lsd --tree'
