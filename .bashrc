@@ -7,3 +7,7 @@ export HISTTIMEFORMAT='%F %T '
 if [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]]; then
   . /usr/share/bash-completion/bash_completion
 fi
+
+if [[ -f ~/.aliases ]]; then
+  . ~/.aliases
+fi
