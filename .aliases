@@ -1,18 +1,28 @@
 # https://github.com/lsd-rs/lsd
-alias ls='lsd'
-alias tree='lsd --tree'
+if type lsd > /dev/null 2>&1; then
+  alias ls='lsd'
+  alias tree='lsd --tree'
+fi
 
 # https://github.com/sharkdp/bat
-alias cat='bat'
+if type bat > /dev/null 2>&1; then
+  alias cat='bat'
+fi
 
 # https://github.com/dandavison/delta
-alias diff='delta'
+if type delta > /dev/null 2>&1; then
+  alias diff='delta'
+fi
 
 # https://github.com/BurntSushi/ripgrep
-alias grep='rg'
+if type rg > /dev/null 2>&1; then
+  alias grep='rg'
+fi
 
 # https://github.com/sharkdp/fd
-alias find='fd'
+if type fd > /dev/null 2>&1; then
+  alias find='fd'
+fi
 
 # WSL2 only
 if [[ "$(uname -r)" == *microsoft-standard-WSL2 ]]; then
