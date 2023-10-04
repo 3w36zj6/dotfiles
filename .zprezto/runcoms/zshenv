@@ -14,3 +14,12 @@ fi
 if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
 fi
+
+# bun completions
+if [ -s ~/.bun/_bun ]; then
+  . ~/.bun/_bun
+fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
