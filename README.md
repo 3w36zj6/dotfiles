@@ -39,3 +39,9 @@ ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```sh
 ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
 ```
+
+### Zellij
+
+```sh
+ln -sfn /path/to/dotfiles/.config/zellij ~/.config/zellij
+```
