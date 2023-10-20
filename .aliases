@@ -28,4 +28,5 @@ fi
 if [[ "$(uname -r)" == *microsoft-standard-WSL2 ]]; then
   alias explorer="/mnt/c/Windows/explorer.exe"
   alias code="'/mnt/c/Program Files/Microsoft VS Code/bin/code'"
+  alias clip="/mnt/c/Windows/System32/clip.exe"
 fi
