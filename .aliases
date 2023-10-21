@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://github.com/lsd-rs/lsd
 if type lsd > /dev/null 2>&1; then
   alias ls='lsd'
