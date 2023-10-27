@@ -15,6 +15,11 @@ if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
 fi
 
+# rye setup
+if [ -f ~/.rye/env ]; then
+  . ~/.rye/env
+fi
+
 # bun completions
 if [ -s ~/.bun/_bun ]; then
   . ~/.bun/_bun
