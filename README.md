@@ -20,6 +20,8 @@ git clone https://github.com/scop/bash-completion.git /usr/share/bash-completion
 ### Zsh + Prezto + Powerlevel10k
 
 ```sh
+ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
+
 # Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 

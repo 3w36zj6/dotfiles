@@ -26,3 +26,8 @@ fi
 if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
+
+# Completion definitions
+if [ -d ~/.zfunc ]; then
+  . ~/.zfunc/*
+fi
