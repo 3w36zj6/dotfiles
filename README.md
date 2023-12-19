@@ -5,7 +5,7 @@
 ### Aliases
 
 ```sh
-ln -sf /path/to/dotfiles/.aliases ~/.aliases
+ln -sf /path/to/dotfiles/.shell_aliases ~/.shell_aliases
 ```
 
 ### Bash + bash-completion
