@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Rust setup
+if [ -f ~/.cargo/env ]; then
+  . ~/.cargo/env
+fi
+
+# Rye setup
+if [ -f ~/.rye/env ]; then
+  . ~/.rye/env
+fi
+
+# Bun setup
+if [ -d ~/.bun ]; then
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+
+  # completions
+  if [ -s ~/.bun/_bun ]; then
+    . ~/.bun/_bun
+  fi
+fi

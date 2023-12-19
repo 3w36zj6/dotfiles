@@ -10,21 +10,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# rustup shell setup
-if [ -f ~/.cargo/env ]; then
-  . ~/.cargo/env
+# Environment variables
+if [ -f ~/.shell_envs ]; then
+  . ~/.shell_envs
 fi
-
-# rye setup
-if [ -f ~/.rye/env ]; then
-  . ~/.rye/env
-fi
-
-# bun completions
-if [ -s ~/.bun/_bun ]; then
-  . ~/.bun/_bun
-fi
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

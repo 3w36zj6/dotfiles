@@ -123,7 +123,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# rustup shell setup
-if [ -f ~/.cargo/env ]; then
-  . ~/.cargo/env
+# Environment variables
+if [ -f ~/.shell_envs ]; then
+  . ~/.shell_envs
 fi

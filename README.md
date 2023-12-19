@@ -8,6 +8,12 @@
 ln -sf /path/to/dotfiles/.shell_aliases ~/.shell_aliases
 ```
 
+### Environment variables
+
+```sh
+ln -sf /path/to/dotfiles/.shell_envs ~/.shell_envs
+```
+
 ### Bash + bash-completion
 
 ```sh
