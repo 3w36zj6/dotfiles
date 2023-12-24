@@ -18,6 +18,36 @@ https://bun.sh/docs/installation
 curl -fsSL https://bun.sh/install | bash
 ```
 
+### Cargo
+
+https://doc.rust-lang.org/cargo/getting-started/installation.html
+
+```sh
+curl -fsSL  https://sh.rustup.rs | sh -s -- -y
+```
+
+#### Cargo packages
+
+```sh
+# https://github.com/lsd-rs/lsd
+cargo install lsd
+
+# https://github.com/sharkdp/bat
+cargo install bat
+
+# https://github.com/dandavison/delta
+cargo install git-delta
+
+# https://github.com/BurntSushi/ripgrep
+cargo install ripgrep
+
+# https://github.com/sharkdp/fd
+cargo install fd-find
+
+# https://github.com/zellij-org/zellij
+cargo install zellij
+```
+
 ## Usage
 
 ### Aliases
