@@ -10,6 +10,14 @@ https://docs.deno.com/runtime/manual/getting_started/installation
 curl -fsSL https://deno.land/x/install/install.sh | sh
 ```
 
+### Bun
+
+https://bun.sh/docs/installation
+
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+
 ## Usage
 
 ### Aliases
