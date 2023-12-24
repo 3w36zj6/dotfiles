@@ -1,5 +1,15 @@
 # dotfiles
 
+## Installation
+
+### Deno
+
+https://docs.deno.com/runtime/manual/getting_started/installation
+
+```sh
+curl -fsSL https://deno.land/x/install/install.sh | sh
+```
+
 ## Usage
 
 ### Aliases
