@@ -48,6 +48,14 @@ cargo install fd-find
 cargo install zellij
 ```
 
+### Rye
+
+https://rye-up.com/guide/installation/
+
+```sh
+curl -fsSL https://rye-up.com/get | bash
+```
+
 ## Usage
 
 ### Aliases
