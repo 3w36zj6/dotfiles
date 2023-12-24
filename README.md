@@ -47,6 +47,9 @@ cargo install fd-find
 # https://github.com/dalance/procs
 cargo install procs
 
+# https://github.com/bootandy/dust
+cargo install du-dust
+
 # https://github.com/zellij-org/zellij
 cargo install zellij
 ```
