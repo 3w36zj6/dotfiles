@@ -44,6 +44,9 @@ cargo install ripgrep
 # https://github.com/sharkdp/fd
 cargo install fd-find
 
+# https://github.com/dalance/procs
+cargo install procs
+
 # https://github.com/zellij-org/zellij
 cargo install zellij
 ```

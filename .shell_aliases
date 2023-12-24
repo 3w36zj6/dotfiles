@@ -24,7 +24,11 @@ fi
 # https://github.com/sharkdp/fd
 if type fd > /dev/null 2>&1; then
   alias find="fd"
-  alias find='fd'
+fi
+
+# https://github.com/dalance/procs
+if type procs > /dev/null 2>&1; then
+  alias ps="procs --tree"
 fi
 
 # https://github.com/zellij-org/zellij
