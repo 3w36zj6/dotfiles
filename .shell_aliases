@@ -2,27 +2,28 @@
 
 # https://github.com/lsd-rs/lsd
 if type lsd > /dev/null 2>&1; then
-  alias ls='lsd'
-  alias tree='lsd --tree'
+  alias ls="lsd"
+  alias tree="lsd --tree"
 fi
 
 # https://github.com/sharkdp/bat
 if type bat > /dev/null 2>&1; then
-  alias cat='bat'
+  alias cat="bat"
 fi
 
 # https://github.com/dandavison/delta
 if type delta > /dev/null 2>&1; then
-  alias diff='delta'
+  alias diff="delta"
 fi
 
 # https://github.com/BurntSushi/ripgrep
 if type rg > /dev/null 2>&1; then
-  alias grep='rg'
+  alias grep="rg"
 fi
 
 # https://github.com/sharkdp/fd
 if type fd > /dev/null 2>&1; then
+  alias find="fd"
   alias find='fd'
 fi
 
