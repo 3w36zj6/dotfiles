@@ -29,5 +29,6 @@ fi
 
 # Completion definitions
 if [ -d ~/.zfunc ]; then
-  . ~/.zfunc/*
+  fpath+=(~/.zfunc $fpath)
+  autoload -Uz compinit && compinit
 fi
