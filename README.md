@@ -50,6 +50,9 @@ cargo install procs
 # https://github.com/bootandy/dust
 cargo install du-dust
 
+# https://github.com/ajeetdsouza/zoxide
+cargo install zoxide
+
 # https://github.com/zellij-org/zellij
 cargo install zellij
 ```

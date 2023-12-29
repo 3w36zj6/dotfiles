@@ -127,3 +127,8 @@ fi
 if [ -f ~/.shell_envs ]; then
   . ~/.shell_envs
 fi
+
+# zoxide setup
+if type zoxide > /dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
