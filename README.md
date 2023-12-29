@@ -107,6 +107,13 @@ ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
 ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
 
+### fzf
+
+```sh
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 ### Git
 
 ```sh
