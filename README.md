@@ -53,6 +53,9 @@ cargo install du-dust
 # https://github.com/ajeetdsouza/zoxide
 cargo install zoxide
 
+# https://github.com/ducaale/xh
+cargo install xh
+
 # https://github.com/zellij-org/zellij
 cargo install zellij
 ```
