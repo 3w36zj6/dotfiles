@@ -56,6 +56,10 @@ cargo install zoxide
 # https://github.com/ducaale/xh
 cargo install xh
 
+# https://github.com/bvaisvil/zenith
+cargo install --git https://github.com/bvaisvil/zenith.git
+cargo install --features nvidia --git https://github.com/bvaisvil/zenith.git # for NVIDIA GPU support
+
 # https://github.com/extrawurst/gitui
 cargo install gitui
 

@@ -41,6 +41,11 @@ if type zoxide > /dev/null 2>&1; then
   alias cd="z"
 fi
 
+# https://github.com/bvaisvil/zenith
+if type zenith > /dev/null 2>&1; then
+  alias top="zenith"
+fi
+
 # https://github.com/zellij-org/zellij
 if type zellij > /dev/null 2>&1; then
   alias zj="zellij"
