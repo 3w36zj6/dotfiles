@@ -73,6 +73,9 @@ https://rye-up.com/guide/installation/
 
 ```sh
 curl -fsSL https://rye-up.com/get | bash
+
+# Enable uv support
+rye config --set-bool behavior.use-uv=true
 ```
 
 ## Usage
