@@ -2,6 +2,14 @@
 
 ## Installation
 
+### mise
+
+https://mise.jdx.dev/getting-started.html
+
+```sh
+curl -fsSL https://mise.run | sh
+```
+
 ### Deno
 
 https://docs.deno.com/runtime/manual/getting_started/installation
