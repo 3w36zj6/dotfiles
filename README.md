@@ -86,6 +86,14 @@ curl -fsSL https://rye-up.com/get | bash
 rye config --set-bool behavior.use-uv=true
 ```
 
+### Wasmtime
+
+https://wasmtime.dev/
+
+```sh
+curl -fsSL https://wasmtime.dev/install.sh | bash
+```
+
 ## Usage
 
 ### Aliases

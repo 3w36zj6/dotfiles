@@ -35,3 +35,9 @@ if [ -s ~/.local/bin/mise ]; then
     eval "$(~/.local/bin/mise activate zsh)"
   fi
 fi
+
+# Wasmtime setup
+if [ -d ~/.wasmtime ]; then
+  export WASMTIME_HOME="$HOME/.wasmtime"
+  export PATH="$WASMTIME_HOME/bin:$PATH"
+fi
