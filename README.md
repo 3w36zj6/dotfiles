@@ -114,7 +114,7 @@ ln -sf /path/to/dotfiles/.shell_envs ~/.shell_envs
 ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
 
 # bash-completion
-git clone https://github.com/scop/bash-completion.git /usr/share/bash-completion
+git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
 ```
 
 ### Zsh + Prezto + Powerlevel10k
@@ -123,7 +123,7 @@ git clone https://github.com/scop/bash-completion.git /usr/share/bash-completion
 ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
 
 # Prezto
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive --depth 1 https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogin ~/.zlogin
 ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogout ~/.zlogout
