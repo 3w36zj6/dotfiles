@@ -1,6 +1,58 @@
 # dotfiles
 
-## Installation
+## Install automatically
+
+```sh
+wget https://3w36zj6.github.io/dotfiles/setup
+./setup
+
+# restart shell
+
+# need cargo command
+deno run --allow-all scripts/install_crates_io.ts
+```
+
+## Install manually
+
+### Aliases
+
+```sh
+ln -sf /path/to/dotfiles/.shell_aliases ~/.shell_aliases
+```
+
+### Environment variables
+
+```sh
+ln -sf /path/to/dotfiles/.shell_envs ~/.shell_envs
+```
+
+### Bash + bash-completion
+
+```sh
+ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
+
+# bash-completion
+git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
+```
+
+### Zsh + Prezto + Powerlevel10k
+
+```sh
+ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
+
+# Prezto
+git clone --recursive --depth 1 https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogin ~/.zlogin
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogout ~/.zlogout
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zpreztorc ~/.zpreztorc
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zprofile ~/.zprofile
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zshenv ~/.zshenv
+ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
+
+# Powerlevel10k
+ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
+```
 
 ### mise
 
@@ -94,48 +146,6 @@ https://wasmtime.dev/
 curl -fsSL https://wasmtime.dev/install.sh | bash
 ```
 
-## Usage
-
-### Aliases
-
-```sh
-ln -sf /path/to/dotfiles/.shell_aliases ~/.shell_aliases
-```
-
-### Environment variables
-
-```sh
-ln -sf /path/to/dotfiles/.shell_envs ~/.shell_envs
-```
-
-### Bash + bash-completion
-
-```sh
-ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
-
-# bash-completion
-git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
-```
-
-### Zsh + Prezto + Powerlevel10k
-
-```sh
-ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
-
-# Prezto
-git clone --recursive --depth 1 https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogin ~/.zlogin
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogout ~/.zlogout
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zpreztorc ~/.zpreztorc
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zprofile ~/.zprofile
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zshenv ~/.zshenv
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
-
-# Powerlevel10k
-ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
-```
-
 ### fzf
 
 ```sh
@@ -143,7 +153,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-### Git
+### Git config
 
 ```sh
 ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
