@@ -111,6 +111,18 @@ if (isEnvsInstallationConfirmed) {
   await $`ln -sf ${gitRootPath}/.shell_envs ${homeDirectoryPath}/.shell_envs`;
 }
 
+// Nix
+const isNixInstallationConfirmed =
+  isAllYes ||
+  (await confirm({
+    message: "Do you want to install Nix?",
+  }));
+
+if (isNixInstallationConfirmed) {
+  // NOTE: Single-user installation
+  await $`curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon`;
+}
+
 // mise
 const isMiseInstallationConfirmed =
   isAllYes ||

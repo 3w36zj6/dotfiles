@@ -54,6 +54,14 @@ ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
 ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
 
+### Nix
+
+https://nix.dev/manual/nix/latest/installation/installing-binary
+
+```sh
+curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon
+```
+
 ### mise
 
 https://mise.jdx.dev/getting-started.html
@@ -136,6 +144,14 @@ curl -fsSL https://rye-up.com/get | bash
 
 # Enable uv support
 rye config --set-bool behavior.use-uv=true
+```
+
+### Nim
+
+https://nim-lang.org/install_unix.html
+
+```sh
+curl -fsSL https://nim-lang.org/choosenim/init.sh | sh
 ```
 
 ### Wasmtime
