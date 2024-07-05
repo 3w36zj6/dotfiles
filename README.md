@@ -54,6 +54,14 @@ ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
 ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
 
+### Nix
+
+https://nix.dev/manual/nix/latest/installation/installing-binary
+
+```sh
+curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon
+```
+
 ### mise
 
 https://mise.jdx.dev/getting-started.html

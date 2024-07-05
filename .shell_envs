@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Nix setup
+if [ -s ~/.nix-profile/etc/profile.d/nix.sh ]; then
+  . ~/.nix-profile/etc/profile.d/nix.sh
+fi
+
 # Rust setup
 if [ -f ~/.cargo/env ]; then
   . ~/.cargo/env
