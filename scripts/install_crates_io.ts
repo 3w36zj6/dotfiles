@@ -18,6 +18,24 @@ for (const requirementCommand of requirementCommands) {
   }
 }
 
+// Check cargo-binstall command
+try {
+  await $`which cargo-binstall`.quiet();
+} catch (_e) {
+  console.error(
+    errorText,
+    `cargo-binstall command is not found. Please install it.`,
+  );
+  const isCargoBinstallInstallationConfirmed = await confirm({
+    message: "Do you want to install cargo-binstall?",
+  });
+  if (isCargoBinstallInstallationConfirmed) {
+    await $`cargo install cargo-binstall`;
+  } else {
+    Deno.exit(1);
+  }
+}
+
 const isAllYes = Deno.args.length > 0 &&
   (Deno.args[0] === "-y" || Deno.args[0] === "--yes");
 
@@ -43,6 +61,13 @@ const packageNames = [
 
 if (isCargoPackagesInstallationConfirmed) {
   for (const packageName of packageNames) {
-    await $`cargo install ${packageName}`;
+    try {
+      await $`cargo-binstall ${packageName}`;
+    } catch (_e) {
+      console.error(
+        errorText,
+        `Failed to install ${packageName}.`,
+      );
+    }
   }
 }
