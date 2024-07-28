@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  format:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: scripts/
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+      - name: Check format
+        run: deno fmt --check
+  lint:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: scripts/
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+      - name: Check lint
+        run: deno lint
