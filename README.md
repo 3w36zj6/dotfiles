@@ -96,43 +96,46 @@ curl -fsSL  https://sh.rustup.rs | sh -s -- -y
 
 #### Cargo packages
 
+> [!NOTE]
+> [`cargo-binstall`](https://github.com/cargo-bins/cargo-binstall)が必要です。
+
 ```sh
 # https://github.com/lsd-rs/lsd
-cargo install lsd
+cargo-binstall lsd
 
 # https://github.com/sharkdp/bat
-cargo install bat
+cargo-binstall bat
 
 # https://github.com/dandavison/delta
-cargo install git-delta
+cargo-binstall git-delta
 
 # https://github.com/BurntSushi/ripgrep
-cargo install ripgrep
+cargo-binstall ripgrep
 
 # https://github.com/sharkdp/fd
-cargo install fd-find
+cargo-binstall fd-find
 
 # https://github.com/dalance/procs
-cargo install procs
+cargo-binstall procs
 
 # https://github.com/bootandy/dust
-cargo install du-dust
+cargo-binstall du-dust
 
 # https://github.com/ajeetdsouza/zoxide
-cargo install zoxide
+cargo-binstall zoxide
 
 # https://github.com/ducaale/xh
-cargo install xh
+cargo-binstall xh
 
 # https://github.com/bvaisvil/zenith
-cargo install --git https://github.com/bvaisvil/zenith.git
-cargo install --features nvidia --git https://github.com/bvaisvil/zenith.git # for NVIDIA GPU support
+cargo-binstall --git https://github.com/bvaisvil/zenith.git
+cargo-binstall --features nvidia --git https://github.com/bvaisvil/zenith.git # for NVIDIA GPU support
 
 # https://github.com/extrawurst/gitui
-cargo install gitui
+cargo-binstall gitui
 
 # https://github.com/zellij-org/zellij
-cargo install zellij
+cargo-binstall zellij
 ```
 
 ### Rye
