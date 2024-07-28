@@ -186,6 +186,9 @@ const isFzfInstallationConfirmed = isAllYes ||
   }));
 
 if (isFzfInstallationConfirmed) {
+  if (await isDirectoryExists(`${homeDirectoryPath}/.fzf`)) {
+    await Deno.remove(`${homeDirectoryPath}/.fzf`, { recursive: true });
+  }
   await $`git clone --depth 1 https://github.com/junegunn/fzf.git ${homeDirectoryPath}/.fzf`;
   await $`${homeDirectoryPath}/.fzf/install`;
 }
