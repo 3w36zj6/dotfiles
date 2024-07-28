@@ -1,6 +1,6 @@
-import { $ } from "https://deno.land/x/dax@0.39.1/mod.ts"
-import { confirm, input } from "npm:@inquirer/prompts@4.3.2"
-import pc from "npm:picocolors@1.0.0"
+import { $ } from "https://deno.land/x/dax@0.39.1/mod.ts";
+import { confirm, input } from "npm:@inquirer/prompts@4.3.2";
+import pc from "npm:picocolors@1.0.0";
 
 const errorText = `${pc.bold(pc.red("error"))}:`;
 // const successText = `${pc.bold(pc.green("success"))}:`;
@@ -18,7 +18,7 @@ for (const requirementCommand of requirementCommands) {
   } catch (_e) {
     console.error(
       errorText,
-      `${requirementCommand} command is not found. Please install it.`
+      `${requirementCommand} command is not found. Please install it.`,
     );
     Deno.exit(1);
   }
@@ -37,8 +37,8 @@ const isDirectoryExists = async (path: string): Promise<boolean> => {
   }
 };
 
-const isAllYes =
-  Deno.args.length > 0 && (Deno.args[0] === "-y" || Deno.args[0] === "--yes");
+const isAllYes = Deno.args.length > 0 &&
+  (Deno.args[0] === "-y" || Deno.args[0] === "--yes");
 
 const homeDirectoryPath = await input({
   message: "Please input your home directory path",
@@ -51,8 +51,7 @@ const gitRootPath = await input({
 });
 
 // Bash
-const isBashSetUpConfirmed =
-  isAllYes ||
+const isBashSetUpConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to set up for bash?",
   }));
@@ -66,8 +65,7 @@ if (isBashSetUpConfirmed) {
 }
 
 // Zsh
-const isZshSetUpConfirmed =
-  isAllYes ||
+const isZshSetUpConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to set up for zsh?",
   }));
@@ -90,8 +88,7 @@ if (isZshSetUpConfirmed) {
 }
 
 // Shell aliases
-const isAliasesInstallationConfirmed =
-  isAllYes ||
+const isAliasesInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to create symbolic link for shell aliases?",
   }));
@@ -101,8 +98,7 @@ if (isAliasesInstallationConfirmed) {
 }
 
 // Shell envs
-const isEnvsInstallationConfirmed =
-  isAllYes ||
+const isEnvsInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to create symbolic link for shell envs?",
   }));
@@ -112,8 +108,7 @@ if (isEnvsInstallationConfirmed) {
 }
 
 // Nix
-const isNixInstallationConfirmed =
-  isAllYes ||
+const isNixInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Nix?",
   }));
@@ -124,8 +119,7 @@ if (isNixInstallationConfirmed) {
 }
 
 // mise
-const isMiseInstallationConfirmed =
-  isAllYes ||
+const isMiseInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install mise?",
   }));
@@ -135,8 +129,7 @@ if (isMiseInstallationConfirmed) {
 }
 
 // Deno
-const isDenoInstallationConfirmed =
-  isAllYes ||
+const isDenoInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Deno?",
   }));
@@ -146,8 +139,7 @@ if (isDenoInstallationConfirmed) {
 }
 
 // Bun
-const isBunInstallationConfirmed =
-  isAllYes ||
+const isBunInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Bun?",
   }));
@@ -157,8 +149,7 @@ if (isBunInstallationConfirmed) {
 }
 
 // Cargo
-const isCargoInstallationConfirmed =
-  isAllYes ||
+const isCargoInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Cargo?",
   }));
@@ -169,8 +160,7 @@ if (isCargoInstallationConfirmed) {
 }
 
 // Rye
-const isRyeInstallationConfirmed =
-  isAllYes ||
+const isRyeInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Rye?",
   }));
@@ -180,8 +170,7 @@ if (isRyeInstallationConfirmed) {
 }
 
 // Wasmtime
-const isWasmtimeInstallationConfirmed =
-  isAllYes ||
+const isWasmtimeInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install Wasmtime?",
   }));
@@ -191,8 +180,7 @@ if (isWasmtimeInstallationConfirmed) {
 }
 
 // fzf
-const isFzfInstallationConfirmed =
-  isAllYes ||
+const isFzfInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to install fzf?",
   }));
@@ -203,8 +191,7 @@ if (isFzfInstallationConfirmed) {
 }
 
 // Git config
-const isGitConfigInstallationConfirmed =
-  isAllYes ||
+const isGitConfigInstallationConfirmed = isAllYes ||
   (await confirm({
     message: "Do you want to create symbolic link for Git config?",
   }));
@@ -214,8 +201,7 @@ if (isGitConfigInstallationConfirmed) {
 }
 
 // Reset dotfiles repository to latest commit on main branch
-const isDotfilesRepositoryResetConfirmed =
-  isAllYes ||
+const isDotfilesRepositoryResetConfirmed = isAllYes ||
   (await confirm({
     message:
       "Do you want to reset dotfiles repository to latest commit on main branch?",
