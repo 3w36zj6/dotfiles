@@ -53,10 +53,33 @@ ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
 
 ### Nix
 
+#### Official distribution
+
 https://nix.dev/manual/nix/latest/installation/installing-binary
 
 ```sh
 curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon
+```
+
+#### nix-portable
+
+https://github.com/DavHau/nix-portable
+
+```sh
+curl -fsSL https://github.com/DavHau/nix-portable/releases/latest/download/nix-portable-$(uname -m) >! ~/.local/bin/nix-portable
+chmod +x ~/.local/bin/nix-portable
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-build
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-channel
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-collect-garbage
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-copy-closure
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-daemon
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-env
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-hash
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-instantiate
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-prefetch-url
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-shell
+ln -s ~/.local/bin/nix-portable ~/.local/bin/nix-store
 ```
 
 ### mise
