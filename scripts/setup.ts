@@ -71,18 +71,13 @@ const isZshSetUpConfirmed = isAllYes ||
   }));
 
 if (isZshSetUpConfirmed) {
+  await $`ln -sf ${gitRootPath}/.zshrc ${homeDirectoryPath}/.zshrc`;
+  await $`ln -sf ${gitRootPath}/.zshenv ${homeDirectoryPath}/.zshenv`;
   await $`ln -sfn ${gitRootPath}/.zfunc ${homeDirectoryPath}/.zfunc`;
 
-  if (await isDirectoryExists(`${homeDirectoryPath}/.zprezto`)) {
-    await Deno.remove(`${homeDirectoryPath}/.zprezto`, { recursive: true });
-  }
-  await $`git clone --recursive --depth 1 https://github.com/sorin-ionescu/prezto.git ${homeDirectoryPath}/.zprezto`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zlogin ${homeDirectoryPath}/.zlogin`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zlogout ${homeDirectoryPath}/.zlogout`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zpreztorc ${homeDirectoryPath}/.zpreztorc`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zprofile ${homeDirectoryPath}/.zprofile`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zshenv ${homeDirectoryPath}/.zshenv`;
-  await $`ln -sf ${gitRootPath}/.zprezto/runcoms/zshrc ${homeDirectoryPath}/.zshrc`;
+  await $`curl --proto "=https" -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ${homeDirectoryPath}/.local/bin --force`;
+  await $`ln -sfn ${gitRootPath}/.config/sheldon ${homeDirectoryPath}/.config/sheldon`;
+  await $`sheldon lock`;
 
   await $`ln -sf ${gitRootPath}/.p10k.zsh ${homeDirectoryPath}/.p10k.zsh`;
 }
