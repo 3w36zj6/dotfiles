@@ -35,20 +35,17 @@ ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
 git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
 ```
 
-### Zsh + Prezto + Powerlevel10k
+### Zsh + Sheldon + Powerlevel10k
 
 ```sh
+ln -sf /path/to/dotfiles/.zshrc ~/.zshrc
+ln -sf /path/to/dotfiles/.zshenv ~/.zshenv
 ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
 
-# Prezto
-git clone --recursive --depth 1 https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogin ~/.zlogin
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zlogout ~/.zlogout
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zpreztorc ~/.zpreztorc
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zprofile ~/.zprofile
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zshenv ~/.zshenv
-ln -sf /path/to/dotfiles/.zprezto/runcoms/zshrc ~/.zshrc
+# Sheldon
+curl --proto "=https" -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin --force
+ln -sfn /path/to/dotfiles/.config/sheldon ~/.config/sheldon
+sheldon lock
 
 # Powerlevel10k
 ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
