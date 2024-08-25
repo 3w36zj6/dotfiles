@@ -59,4 +59,8 @@ setopt HIST_SAVE_NO_DUPS      # Do not write a duplicate event to the history fi
 setopt HIST_VERIFY            # Do not execute immediately upon history expansion.
 setopt HIST_BEEP              # Beep when accessing non-existent history.
 
+export HISTFILE=${HOME}/.zsh_history # The path to the history file.
+export HISTSIZE=1000000              # The maximum number of events to save in the internal history.
+export SAVEHIST=$HISTSIZE            # The maximum number of events to save in the history file.
+
 setopt CORRECT # Correct commands.
