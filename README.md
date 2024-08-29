@@ -3,12 +3,22 @@
 ## Install automatically
 
 ```sh
-wget https://3w36zj6.github.io/dotfiles/setup
-./setup
+git clone git@github.com:3w36zj6/dotfiles.git
+cd dotfiles
 
-# restart shell
+# If you use x86_64-unknown-linux-gnu
+wget https://3w36zj6.github.io/dotfiles/setup_x86_64-unknown-linux-gnu
+chmod +x setup_x86_64-unknown-linux-gnu
+./setup_x86_64-unknown-linux-gnu
 
-# need cargo command
+# If you use aarch64-apple-darwin
+wget https://3w36zj6.github.io/dotfiles/setup_aarch64-apple-darwin
+chmod +x setup_aarch64-apple-darwin
+./setup_aarch64-apple-darwin
+
+# Restart shell
+
+# Install crates.io packages (require Cargo)
 deno run --allow-all scripts/install_crates_io.ts
 ```
 
