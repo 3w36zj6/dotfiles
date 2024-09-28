@@ -18,8 +18,9 @@ chmod +x setup_aarch64-apple-darwin
 
 # Restart shell
 
-# Install crates.io packages (require Cargo)
-deno run --allow-all scripts/install_crates_io.ts
+# Install Rust packages (require Cargo)
+deno run --allow-all scripts/install_rust_packages.ts
+
 ```
 
 ## Install manually
@@ -106,10 +107,10 @@ https://doc.rust-lang.org/cargo/getting-started/installation.html
 curl -fsSL  https://sh.rustup.rs | sh -s -- -y
 ```
 
-#### Cargo packages
+#### Rust packages
 
 > [!NOTE]
-> [`cargo-binstall`](https://github.com/cargo-bins/cargo-binstall)が必要です。
+> [`cargo-binstall`](https://github.com/cargo-bins/cargo-binstall) is required.
 
 ```sh
 # https://github.com/lsd-rs/lsd
