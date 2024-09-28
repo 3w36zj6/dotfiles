@@ -75,6 +75,11 @@ https://mise.jdx.dev/getting-started.html
 
 ```sh
 curl -fsSL https://mise.run | sh
+
+ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
+
+# List of mise tools
+node --version  # lts
 ```
 
 ### Deno

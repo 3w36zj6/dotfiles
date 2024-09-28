@@ -121,6 +121,7 @@ const isMiseInstallationConfirmed = isAllYes ||
 
 if (isMiseInstallationConfirmed) {
   await executeInstallScript("https://mise.run");
+  await $`ln -sfn ${gitRootPath}/.config/mise ${homeDirectoryPath}/.config/mise`;
 }
 
 // Deno
