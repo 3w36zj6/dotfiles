@@ -23,7 +23,7 @@ jobs:
       - name: Compile install script
         run: deno compile --allow-all --target x86_64-unknown-linux-gnu --output dist/setup_x86_64-unknown-linux-gnu scripts/setup.ts
       - name: Upload artifact for x86_64-unknown-linux-gnu
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: setup-x86_64-unknown-linux-gnu
           path: dist/setup_x86_64-unknown-linux-gnu
@@ -37,7 +37,7 @@ jobs:
       - name: Compile install script
         run: deno compile --allow-all --target aarch64-apple-darwin --output dist/setup_aarch64-apple-darwin scripts/setup.ts
       - name: Upload artifact for aarch64-apple-darwin
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: setup-aarch64-apple-darwin
           path: dist/setup_aarch64-apple-darwin
@@ -48,12 +48,12 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Download artifact for x86_64-unknown-linux-gnu
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: setup-x86_64-unknown-linux-gnu
           path: dist
       - name: Download artifact for aarch64-apple-darwin
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: setup-aarch64-apple-darwin
           path: dist
