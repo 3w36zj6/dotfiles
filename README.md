@@ -21,6 +21,8 @@ chmod +x setup_aarch64-apple-darwin
 # Install Rust packages (require Cargo)
 deno run --allow-all scripts/install_rust_packages.ts
 
+# Install Node.js packages (require Node.js and Bun)
+deno run --allow-all scripts/install_node_packages.ts
 ```
 
 ## Install manually
@@ -97,6 +99,16 @@ https://bun.sh/docs/installation
 
 ```sh
 curl -fsSL https://bun.sh/install | bash
+```
+
+#### Node.js packages
+
+> [!NOTE]
+> Global Node.js packages are managed with Bun, but Node.js is required to run them.
+
+```sh
+# https://github.com/antfu-collective/ni
+bun install -g @antfu/ni
 ```
 
 ### Cargo
