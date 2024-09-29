@@ -39,6 +39,7 @@ if [ -s ~/.local/bin/mise ]; then
   elif [ -n "$ZSH_VERSION" ]; then
     eval "$(~/.local/bin/mise activate zsh)"
   fi
+  eval "$(mise activate --shims)"
 fi
 
 # Wasmtime setup
