@@ -50,6 +50,11 @@ const gitRootPath = await input({
   default: await $`git rev-parse --show-toplevel`.text(),
 });
 
+// If `~/.config` does not exist, create it.
+if (!(await isDirectoryExists(`${homeDirectoryPath}/.config`))) {
+  await Deno.mkdir(`${homeDirectoryPath}/.config`);
+}
+
 // Bash
 const isBashSetUpConfirmed = isAllYes ||
   (await confirm({
