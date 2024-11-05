@@ -171,16 +171,6 @@ if (isRyeInstallationConfirmed) {
   await executeInstallScript("https://rye-up.com/get");
 }
 
-// Wasmtime
-const isWasmtimeInstallationConfirmed = isAllYes ||
-  (await confirm({
-    message: "Do you want to install Wasmtime?",
-  }));
-
-if (isWasmtimeInstallationConfirmed) {
-  await executeInstallScript("https://wasmtime.dev/install.sh");
-}
-
 // fzf
 const isFzfInstallationConfirmed = isAllYes ||
   (await confirm({
