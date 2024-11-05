@@ -4,6 +4,20 @@
 node = 'lts'
 #python = ['3.10', '3.11']
 
+"cargo:lsd" = "latest"
+"cargo:bat" = "latest"
+"cargo:git-delta" = "latest"
+"cargo:ripgrep" = "latest"
+"cargo:fd-find" = "latest"
+#"cargo:procs" = "latest"
+"cargo:du-dust" = "latest"
+"cargo:zoxide" = "latest"
+"cargo:xh" = "latest"
+"cargo:bvaisvil/zenith" = "branch:master"
+#"caego:gitui" = "latest"
+"cargo:zellij" = "latest"
+
+
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
 # for example, .nvmrc in the case of node's nvm

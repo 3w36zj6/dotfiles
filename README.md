@@ -18,9 +18,6 @@ chmod +x setup_aarch64-apple-darwin
 
 # Restart shell
 
-# Install Rust packages (require Cargo)
-deno run --allow-all scripts/install_rust_packages.ts
-
 # Install Node.js packages (require Node.js and Bun)
 deno run --allow-all scripts/install_node_packages.ts
 ```
