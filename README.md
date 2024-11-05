@@ -17,9 +17,6 @@ chmod +x setup_aarch64-apple-darwin
 ./setup_aarch64-apple-darwin
 
 # Restart shell
-
-# Install Node.js packages (require Node.js and Bun)
-deno run --allow-all scripts/install_node_packages.ts
 ```
 
 ## Install manually

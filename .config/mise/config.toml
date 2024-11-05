@@ -17,6 +17,8 @@ node = 'lts'
 #"caego:gitui" = "latest"
 "cargo:zellij" = "latest"
 
+"npm:@antfu/ni" = "latest"
+
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
