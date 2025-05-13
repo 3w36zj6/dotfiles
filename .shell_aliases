@@ -46,7 +46,7 @@ fi
 
 # https://github.com/dalance/procs
 if type procs > /dev/null 2>&1; then
-  alias ps="procs --tree"
+  alias ps='procs $USER --tree'
 fi
 
 # https://github.com/bootandy/dust
