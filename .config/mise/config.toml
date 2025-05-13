@@ -1,24 +1,29 @@
 [tools]
 # global tool versions go here
 # you can set these with `mise use -g`
-node = 'lts'
-#python = ['3.10', '3.11']
+# https://github.com/jdx/mise/blob/main/registry.toml
 
-"cargo:lsd" = "latest"
-"cargo:bat" = "latest"
-"cargo:git-delta" = "latest"
-"cargo:ripgrep" = "latest"
-"cargo:fd-find" = "latest"
-#"cargo:procs" = "latest"
-"cargo:du-dust" = "latest"
-"cargo:zoxide" = "latest"
-"cargo:xh" = "latest"
+"lsd" = "latest"
+"bat" = "latest"
+"delta" = "latest"
+"ripgrep" = "latest"
+"fd" = "latest"
+"dust" = "latest"
+"zoxide" = "latest"
+"xh" = "latest"
+"gitui" = "latest"
+"zellij" = "latest"
+
+"cargo:procs" = "latest"
 "cargo:bvaisvil/zenith" = "branch:master"
-#"caego:gitui" = "latest"
-"cargo:zellij" = "latest"
 
+node = "24.0.1"
 "npm:@antfu/ni" = "latest"
 
+python = "3.13.3"
+
+go = "1.24.2"
+"go:github.com/suzuki-shunsuke/pinact/cmd/pinact" = "1.6.0"
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
@@ -56,6 +61,9 @@ paranoid = false       # see MISE_PARANOID
 #env_file = '.env' # load env vars from a dotenv file, see `MISE_ENV_FILE`
 
 experimental = true # enable experimental features
+
+[settings.pipx]
+uvx = false
 
 # configure messages displayed when entering directories with config files
 #status = { missing_tools = "if_other_versions_installed", show_env = false, show_tools = false }
