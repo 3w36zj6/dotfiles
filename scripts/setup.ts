@@ -130,16 +130,6 @@ if (isMiseInstallationConfirmed) {
   await $`mise install`;
 }
 
-// Deno
-const isDenoInstallationConfirmed = isAllYes ||
-  (await confirm({
-    message: "Do you want to install Deno?",
-  }));
-
-if (isDenoInstallationConfirmed) {
-  await executeInstallScript("https://deno.land/x/install/install.sh");
-}
-
 // Cargo
 const isCargoInstallationConfirmed = isAllYes ||
   (await confirm({

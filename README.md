@@ -79,14 +79,6 @@ ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
 node --version  # lts
 ```
 
-### Deno
-
-https://docs.deno.com/runtime/manual/getting_started/installation
-
-```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh
-```
-
 ### Cargo
 
 https://doc.rust-lang.org/cargo/getting-started/installation.html

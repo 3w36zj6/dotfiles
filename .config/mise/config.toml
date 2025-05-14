@@ -26,6 +26,7 @@ go = "1.24.2"
 "go:github.com/suzuki-shunsuke/pinact/cmd/pinact" = "1.6.0"
 
 bun = "1.2.13"
+deno = "2.3.1"
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
