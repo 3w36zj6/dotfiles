@@ -5,33 +5,6 @@ if [ -s ~/.nix-profile/etc/profile.d/nix.sh ]; then
   . ~/.nix-profile/etc/profile.d/nix.sh
 fi
 
-# Rust setup
-if [ -f ~/.cargo/env ]; then
-  . ~/.cargo/env
-fi
-
-# Rye setup
-if [ -f ~/.rye/env ]; then
-  . ~/.rye/env
-fi
-
-# Bun setup
-if [ -d ~/.bun ]; then
-  export BUN_INSTALL="$HOME/.bun"
-  export PATH="$BUN_INSTALL/bin:$PATH"
-
-  # completions
-  if [ -s ~/.bun/_bun ]; then
-    . ~/.bun/_bun
-  fi
-fi
-
-# Deno setup
-if [ -d ~/.deno ]; then
-  export DENO_INSTALL="$HOME/.deno"
-  export PATH="$DENO_INSTALL/bin:$PATH"
-fi
-
 # mise setup
 if [ -s ~/.local/bin/mise ]; then
   if [ -n "$BASH_VERSION" ]; then
@@ -40,10 +13,4 @@ if [ -s ~/.local/bin/mise ]; then
     eval "$(~/.local/bin/mise activate zsh)"
   fi
   eval "$(mise activate --shims)"
-fi
-
-# Wasmtime setup
-if [ -d ~/.wasmtime ]; then
-  export WASMTIME_HOME="$HOME/.wasmtime"
-  export PATH="$WASMTIME_HOME/bin:$PATH"
 fi
