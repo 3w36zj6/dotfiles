@@ -87,24 +87,6 @@ https://docs.deno.com/runtime/manual/getting_started/installation
 curl -fsSL https://deno.land/x/install/install.sh | sh
 ```
 
-### Bun
-
-https://bun.sh/docs/installation
-
-```sh
-curl -fsSL https://bun.sh/install | bash
-```
-
-#### Node.js packages
-
-> [!NOTE]
-> Global Node.js packages are managed with Bun, but Node.js is required to run them.
-
-```sh
-# https://github.com/antfu-collective/ni
-bun install -g @antfu/ni
-```
-
 ### Cargo
 
 https://doc.rust-lang.org/cargo/getting-started/installation.html

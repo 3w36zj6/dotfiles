@@ -140,16 +140,6 @@ if (isDenoInstallationConfirmed) {
   await executeInstallScript("https://deno.land/x/install/install.sh");
 }
 
-// Bun
-const isBunInstallationConfirmed = isAllYes ||
-  (await confirm({
-    message: "Do you want to install Bun?",
-  }));
-
-if (isBunInstallationConfirmed) {
-  await executeInstallScript("https://bun.sh/install");
-}
-
 // Cargo
 const isCargoInstallationConfirmed = isAllYes ||
   (await confirm({
