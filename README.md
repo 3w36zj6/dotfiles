@@ -74,9 +74,6 @@ https://mise.jdx.dev/getting-started.html
 curl -fsSL https://mise.run | sh
 
 ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
-
-# List of mise tools
-node --version  # lts
 ```
 
 ### Cargo
@@ -85,50 +82,6 @@ https://doc.rust-lang.org/cargo/getting-started/installation.html
 
 ```sh
 curl -fsSL  https://sh.rustup.rs | sh -s -- -y
-```
-
-#### Rust packages
-
-> [!NOTE]
-> [`cargo-binstall`](https://github.com/cargo-bins/cargo-binstall) is required.
-
-```sh
-# https://github.com/lsd-rs/lsd
-cargo-binstall lsd
-
-# https://github.com/sharkdp/bat
-cargo-binstall bat
-
-# https://github.com/dandavison/delta
-cargo-binstall git-delta
-
-# https://github.com/BurntSushi/ripgrep
-cargo-binstall ripgrep
-
-# https://github.com/sharkdp/fd
-cargo-binstall fd-find
-
-# https://github.com/dalance/procs
-cargo-binstall procs
-
-# https://github.com/bootandy/dust
-cargo-binstall du-dust
-
-# https://github.com/ajeetdsouza/zoxide
-cargo-binstall zoxide
-
-# https://github.com/ducaale/xh
-cargo-binstall xh
-
-# https://github.com/bvaisvil/zenith
-cargo-binstall --git https://github.com/bvaisvil/zenith.git
-cargo-binstall --features nvidia --git https://github.com/bvaisvil/zenith.git # for NVIDIA GPU support
-
-# https://github.com/extrawurst/gitui
-cargo-binstall gitui
-
-# https://github.com/zellij-org/zellij
-cargo-binstall zellij
 ```
 
 ### fzf
