@@ -76,13 +76,15 @@ curl -fsSL https://mise.run | sh
 ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
 ```
 
-### Git config
+### Configurations
+
+#### Git
 
 ```sh
 ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
 ```
 
-### Zellij
+#### Zellij
 
 ```sh
 ln -sfn /path/to/dotfiles/.config/zellij ~/.config/zellij
