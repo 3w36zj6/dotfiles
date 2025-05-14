@@ -161,16 +161,6 @@ if (isCargoInstallationConfirmed) {
   await $`curl -fsSL https://sh.rustup.rs | bash -s -- -y`;
 }
 
-// Rye
-const isRyeInstallationConfirmed = isAllYes ||
-  (await confirm({
-    message: "Do you want to install Rye?",
-  }));
-
-if (isRyeInstallationConfirmed) {
-  await executeInstallScript("https://rye-up.com/get");
-}
-
 // fzf
 const isFzfInstallationConfirmed = isAllYes ||
   (await confirm({
