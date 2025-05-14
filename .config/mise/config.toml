@@ -13,6 +13,7 @@
 "xh" = "latest"
 "gitui" = "latest"
 "zellij" = "latest"
+"aqua:suzuki-shunsuke/pinact" = "3.1.1"
 
 "cargo:procs" = "latest"
 "cargo:bvaisvil/zenith" = "branch:master"
@@ -23,8 +24,6 @@ node = "24.0.1"
 python = "3.13.3"
 
 go = "1.24.2"
-"go:github.com/suzuki-shunsuke/pinact/cmd/pinact" = "1.6.0"
-
 bun = "1.2.13"
 deno = "2.3.1"
 
