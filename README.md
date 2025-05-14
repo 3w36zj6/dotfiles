@@ -84,13 +84,6 @@ https://doc.rust-lang.org/cargo/getting-started/installation.html
 curl -fsSL  https://sh.rustup.rs | sh -s -- -y
 ```
 
-### fzf
-
-```sh
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
 ### Git config
 
 ```sh

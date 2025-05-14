@@ -13,6 +13,7 @@
 "xh" = "latest"
 "gitui" = "latest"
 "zellij" = "latest"
+"fzf" = "latest"
 "aqua:suzuki-shunsuke/pinact" = "3.1.1"
 
 "cargo:procs" = "latest"

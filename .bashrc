@@ -134,6 +134,6 @@ if type zoxide > /dev/null 2>&1; then
 fi
 
 # fzf setup
-if [ -f ~/.fzf.bash ]; then
-  . ~/.fzf.bash
+if type fzf > /dev/null 2>&1; then
+  eval "$(fzf --bash)"
 fi
