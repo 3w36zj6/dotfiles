@@ -3,27 +3,30 @@
 # you can set these with `mise use -g`
 # https://github.com/jdx/mise/blob/main/registry.toml
 
-"lsd" = "latest"
-"bat" = "latest"
-"delta" = "latest"
-"ripgrep" = "latest"
-"fd" = "latest"
-"dust" = "latest"
-"zoxide" = "latest"
-"xh" = "latest"
-"gitui" = "latest"
-"zellij" = "latest"
-"fzf" = "latest"
+# cli tools
+lsd = "1.1.5"
+bat = "0.25.0"
+delta = "0.18.2"
+ripgrep = "14.1.1"
+fd = "10.2.0"
+dust = "1.2.0"
+zoxide = "0.9.7"
+xh = "0.24.1"
+gitui = "0.27.0"
+zellij = "0.42.2"
+fzf = "0.62.0"
 "aqua:suzuki-shunsuke/pinact" = "3.1.1"
+"aqua:dalance/procs" = "0.14.10"
+"aqua:bvaisvil/zenith" = "0.14.1"
 
-"cargo:procs" = "latest"
-"cargo:bvaisvil/zenith" = "branch:master"
-
-node = "24.0.1"
-"npm:@antfu/ni" = "latest"
-
+# python tools
 python = "3.13.3"
 
+# node tools
+node = "24.0.1"
+"npm:@antfu/ni" = "24.3.0"
+
+# language runtimes
 go = "1.24.2"
 bun = "1.2.13"
 deno = "2.3.1"
