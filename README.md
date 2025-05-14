@@ -76,14 +76,6 @@ curl -fsSL https://mise.run | sh
 ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
 ```
 
-### Cargo
-
-https://doc.rust-lang.org/cargo/getting-started/installation.html
-
-```sh
-curl -fsSL  https://sh.rustup.rs | sh -s -- -y
-```
-
 ### Git config
 
 ```sh

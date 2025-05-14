@@ -130,17 +130,6 @@ if (isMiseInstallationConfirmed) {
   await $`mise install`;
 }
 
-// Cargo
-const isCargoInstallationConfirmed = isAllYes ||
-  (await confirm({
-    message: "Do you want to install Cargo?",
-  }));
-
-if (isCargoInstallationConfirmed) {
-  // NOTE: rustup: Unable to run interactively. Run with -y to accept defaults, --help for additional options
-  await $`curl -fsSL https://sh.rustup.rs | bash -s -- -y`;
-}
-
 // Git config
 const isGitConfigInstallationConfirmed = isAllYes ||
   (await confirm({
