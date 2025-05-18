@@ -15,7 +15,7 @@ xh = "0.24.1"
 gitui = "0.27.0"
 zellij = "0.42.2"
 fzf = "0.62.0"
-"aqua:suzuki-shunsuke/pinact" = "3.1.1"
+pinact = "3.1.1"
 "aqua:dalance/procs" = "0.14.10"
 "aqua:bvaisvil/zenith" = "0.14.1"
 
