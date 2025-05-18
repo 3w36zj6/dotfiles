@@ -68,6 +68,7 @@ paranoid = false       # see MISE_PARANOID
 #env_file = '.env' # load env vars from a dotenv file, see `MISE_ENV_FILE`
 
 experimental = true # enable experimental features
+idiomatic_version_file_enable_tools = ["node"]
 
 [settings.pipx]
 uvx = false
