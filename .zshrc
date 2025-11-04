@@ -64,3 +64,12 @@ export HISTSIZE=1000000              # The maximum number of events to save in t
 export SAVEHIST=$HISTSIZE            # The maximum number of events to save in the history file.
 
 setopt CORRECT # Correct commands.
+
+# VS Code terminal overrides GIT_PAGER to "cat".
+if [[ -o interactive ]]; then
+  if type delta > /dev/null 2>&1; then
+    export GIT_PAGER="delta"
+  else
+    export GIT_PAGER="less"
+  fi
+fi
