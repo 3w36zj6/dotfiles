@@ -35,7 +35,6 @@ rust = "1.82.0"
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
 # for example, .nvmrc in the case of node's nvm
-legacy_version_file = true                     # enabled by default (unlike asdf)
 #legacy_version_file_disable_tools = ['python'] # disable for specific tools
 
 # configure `mise install` to always keep the downloaded archive
@@ -51,7 +50,6 @@ plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
 trusted_config_paths = []
 
 verbose = false     # set to true to see full installation output, see `MISE_VERBOSE`
-asdf_compat = true  # set to true to ensure .tool-versions will be compatible with asdf, see `MISE_ASDF_COMPAT`
 http_timeout = "30s"# set the timeout for http requests in seconds, see `MISE_HTTP_TIMEOUT`
 jobs = 4            # number of plugins or runtimes to install in parallel. The default is `4`.
 raw = false         # set to true to directly pipe plugins to stdin/stdout/stderr
