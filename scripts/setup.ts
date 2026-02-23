@@ -138,6 +138,7 @@ const isGitConfigInstallationConfirmed = isAllYes ||
 
 if (isGitConfigInstallationConfirmed) {
   await $`ln -sf ${gitRootPath}/.gitconfig ${homeDirectoryPath}/.gitconfig`;
+  await $`ln -sfn ${gitRootPath}/.config/git ${homeDirectoryPath}/.config/git`;
 }
 
 // Reset dotfiles repository to latest commit on main branch

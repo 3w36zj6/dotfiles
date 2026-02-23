@@ -82,6 +82,7 @@ ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
 
 ```sh
 ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
+ln -sfn /path/to/dotfiles/.config/git ~/.config/git
 ```
 
 #### Zellij
