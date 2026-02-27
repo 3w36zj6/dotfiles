@@ -1,0 +1,12 @@
+# ignore everything by default
+*
+
+# but keep the ignore file itself
+!.gitignore
+
+# allow specific sub‑directories that we want to version
+!git/
+!mise/
+!sheldon/
+!zellij/
+!git/

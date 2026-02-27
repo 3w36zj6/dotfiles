@@ -50,9 +50,14 @@ const gitRootPath = await input({
   default: await $`git rev-parse --show-toplevel`.text(),
 });
 
-// If `~/.config` does not exist, create it.
-if (!(await isDirectoryExists(`${homeDirectoryPath}/.config`))) {
-  await Deno.mkdir(`${homeDirectoryPath}/.config`);
+// `.config` directory
+const isConfigInstallationConfirmed = isAllYes ||
+  (await confirm({
+    message: "Do you want to symlink the `.config` directory?",
+  }));
+
+if (isConfigInstallationConfirmed) {
+  await $`ln -sfn ${gitRootPath}/.config ${homeDirectoryPath}/.config`;
 }
 
 // Bash
@@ -81,7 +86,6 @@ if (isZshSetUpConfirmed) {
   await $`ln -sfn ${gitRootPath}/.zfunc ${homeDirectoryPath}/.zfunc`;
 
   await $`curl --proto "=https" -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ${homeDirectoryPath}/.local/bin --force`;
-  await $`ln -sfn ${gitRootPath}/.config/sheldon ${homeDirectoryPath}/.config/sheldon`;
   await $`sheldon lock`;
 
   await $`ln -sf ${gitRootPath}/.p10k.zsh ${homeDirectoryPath}/.p10k.zsh`;
@@ -136,7 +140,6 @@ const isMiseInstallationConfirmed = isAllYes ||
 
 if (isMiseInstallationConfirmed) {
   await executeInstallScript("https://mise.run");
-  await $`ln -sfn ${gitRootPath}/.config/mise ${homeDirectoryPath}/.config/mise`;
   await $`mise install`;
 }
 
@@ -148,7 +151,6 @@ const isGitConfigInstallationConfirmed = isAllYes ||
 
 if (isGitConfigInstallationConfirmed) {
   await $`ln -sf ${gitRootPath}/.gitconfig ${homeDirectoryPath}/.gitconfig`;
-  await $`ln -sfn ${gitRootPath}/.config/git ${homeDirectoryPath}/.config/git`;
 }
 
 // Reset dotfiles repository to latest commit on main branch
