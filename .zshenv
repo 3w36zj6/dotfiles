@@ -1,4 +1,4 @@
 # Environment variables
-if [ -f ~/.shell_envs ]; then
-  . ~/.shell_envs
+if [ -f ~/.envs.sh ]; then
+  . ~/.envs.sh
 fi

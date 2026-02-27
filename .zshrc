@@ -14,8 +14,8 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Alias definitions
-if [ -f ~/.shell_aliases ]; then
-  . ~/.shell_aliases
+if [ -f ~/.aliases.sh ]; then
+  . ~/.aliases.sh
 fi
 
 # Completion definitions

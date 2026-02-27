@@ -24,13 +24,13 @@ chmod +x setup_aarch64-apple-darwin
 ### Aliases
 
 ```sh
-ln -sf /path/to/dotfiles/.shell_aliases ~/.shell_aliases
+ln -sf /path/to/dotfiles/.aliases.sh ~/.aliases.sh
 ```
 
 ### Environment variables
 
 ```sh
-ln -sf /path/to/dotfiles/.shell_envs ~/.shell_envs
+ln -sf /path/to/dotfiles/.envs.sh ~/.envs.sh
 ```
 
 ### Bash + bash-completion

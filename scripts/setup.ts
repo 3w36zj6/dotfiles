@@ -94,7 +94,7 @@ const isAliasesInstallationConfirmed = isAllYes ||
   }));
 
 if (isAliasesInstallationConfirmed) {
-  await $`ln -sf ${gitRootPath}/.shell_aliases ${homeDirectoryPath}/.shell_aliases`;
+  await $`ln -sf ${gitRootPath}/.aliases.sh ${homeDirectoryPath}/.aliases.sh`;
 }
 
 // Shell envs
@@ -104,7 +104,7 @@ const isEnvsInstallationConfirmed = isAllYes ||
   }));
 
 if (isEnvsInstallationConfirmed) {
-  await $`ln -sf ${gitRootPath}/.shell_envs ${homeDirectoryPath}/.shell_envs`;
+  await $`ln -sf ${gitRootPath}/.envs.sh ${homeDirectoryPath}/.envs.sh`;
 }
 
 // Nix

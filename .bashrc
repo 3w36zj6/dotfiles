@@ -108,8 +108,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.shell_aliases ]; then
-  . ~/.shell_aliases
+if [ -f ~/.aliases.sh ]; then
+  . ~/.aliases.sh
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -124,8 +124,8 @@ if ! shopt -oq posix; then
 fi
 
 # Environment variables
-if [ -f ~/.shell_envs ]; then
-  . ~/.shell_envs
+if [ -f ~/.envs.sh ]; then
+  . ~/.envs.sh
 fi
 
 # zoxide setup
