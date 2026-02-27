@@ -22,6 +22,9 @@ fi
 if [ -d ~/.zfunc ]; then
   fpath+=(~/.zfunc $fpath)
   autoload -Uz compinit && compinit
+  export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
+  zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+  source <(carapace _carapace)
 fi
 
 # zoxide setup
