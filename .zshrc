@@ -21,20 +21,12 @@ fi
 # Completion definitions
 if [ -d ~/.zfunc ]; then
   fpath+=(~/.zfunc $fpath)
-  autoload -Uz compinit && compinit
-  export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
-  zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-  source <(carapace _carapace)
 fi
+autoload -Uz compinit && compinit
 
-# zoxide setup
-if type zoxide > /dev/null 2>&1; then
-  eval "$(zoxide init zsh)"
-fi
-
-# fzf setup
-if type fzf > /dev/null 2>&1; then
-  source <(fzf --zsh)
+# Interactive tools
+if [ -f ~/.interactive_tools.sh ]; then
+  . ~/.interactive_tools.sh
 fi
 
 # Directory options

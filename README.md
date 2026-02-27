@@ -33,6 +33,12 @@ ln -sf /path/to/dotfiles/.aliases.sh ~/.aliases.sh
 ln -sf /path/to/dotfiles/.envs.sh ~/.envs.sh
 ```
 
+### Interactive tools
+
+```sh
+ln -sf /path/to/dotfiles/.interactive_tools.sh ~/.interactive_tools.sh
+```
+
 ### Bash + bash-completion
 
 ```sh

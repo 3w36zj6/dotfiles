@@ -128,12 +128,7 @@ if [ -f ~/.envs.sh ]; then
   . ~/.envs.sh
 fi
 
-# zoxide setup
-if type zoxide > /dev/null 2>&1; then
-  eval "$(zoxide init bash)"
-fi
-
-# fzf setup
-if type fzf > /dev/null 2>&1; then
-  eval "$(fzf --bash)"
+# Interactive tools
+if [ -f ~/.interactive_tools.sh ]; then
+  . ~/.interactive_tools.sh
 fi

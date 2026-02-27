@@ -107,6 +107,16 @@ if (isEnvsInstallationConfirmed) {
   await $`ln -sf ${gitRootPath}/.envs.sh ${homeDirectoryPath}/.envs.sh`;
 }
 
+// Interactive tools
+const isInteractiveToolsInstallationConfirmed = isAllYes ||
+  (await confirm({
+    message: "Do you want to create symbolic link for shell interactive tools?",
+  }));
+
+if (isInteractiveToolsInstallationConfirmed) {
+  await $`ln -sf ${gitRootPath}/.interactive_tools.sh ${homeDirectoryPath}/.interactive_tools.sh`;
+}
+
 // Nix
 const isNixInstallationConfirmed = isAllYes ||
   (await confirm({
