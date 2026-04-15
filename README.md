@@ -48,17 +48,12 @@ ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
 git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
 ```
 
-### Zsh + Sheldon + Powerlevel10k
+### Zsh + Powerlevel10k
 
 ```sh
 ln -sf /path/to/dotfiles/.zshrc ~/.zshrc
 ln -sf /path/to/dotfiles/.zshenv ~/.zshenv
 ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
-
-# Sheldon
-curl --proto "=https" -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin --force
-ln -sfn /path/to/dotfiles/.config/sheldon ~/.config/sheldon
-sheldon lock
 
 # Powerlevel10k
 ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh

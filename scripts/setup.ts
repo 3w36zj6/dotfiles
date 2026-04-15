@@ -96,9 +96,6 @@ if (isZshSetUpConfirmed) {
   await $`ln -sf ${gitRootPath}/.zshenv ${homeDirectoryPath}/.zshenv`;
   await $`ln -sfn ${gitRootPath}/.zfunc ${homeDirectoryPath}/.zfunc`;
 
-  await $`curl --proto "=https" -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ${homeDirectoryPath}/.local/bin --force`;
-  await $`sheldon lock`;
-
   await $`ln -sf ${gitRootPath}/.p10k.zsh ${homeDirectoryPath}/.p10k.zsh`;
 }
 
