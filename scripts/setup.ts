@@ -10,7 +10,6 @@ const requirementCommands = [
   "curl",
   "git",
   "unzip", // for Deno
-  "xz", // for Wasmtime
 ];
 for (const requirementCommand of requirementCommands) {
   try {
