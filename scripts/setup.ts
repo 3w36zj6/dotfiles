@@ -57,7 +57,19 @@ const isConfigInstallationConfirmed = isAllYes ||
   }));
 
 if (isConfigInstallationConfirmed) {
-  await $`ln -sfn ${gitRootPath}/.config ${homeDirectoryPath}/.config`;
+  const configDestinationPath = `${homeDirectoryPath}/.config`;
+  const configDestinationExists = await Deno.lstat(configDestinationPath)
+    .then(() => true)
+    .catch(() => false);
+  if (configDestinationExists) {
+    console.error(
+      errorText,
+      `${configDestinationPath} already exists. Please remove or move it before creating the symlink.`,
+    );
+    Deno.exit(1);
+  }
+
+  await Deno.symlink(`${gitRootPath}/.config`, configDestinationPath);
 }
 
 // Bash
