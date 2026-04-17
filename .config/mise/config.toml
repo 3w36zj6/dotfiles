@@ -20,6 +20,7 @@ carapace = "1.6.3"
 "aqua:dalance/procs" = "0.14.10"
 "aqua:bvaisvil/zenith" = "0.14.1"
 "aqua:rossmacarthur/sheldon" = { version = "0.8.5", postinstall = "sheldon lock"}
+fnox = "1.20.0"
 
 # python tools
 python = "3.13.3"
