@@ -3,7 +3,6 @@
 # you can set these with `mise use -g`
 # https://github.com/jdx/mise/blob/main/registry.toml
 
-# cli tools
 lsd = "1.1.5"
 bat = "0.25.0"
 delta = "0.18.2"
@@ -19,17 +18,11 @@ pinact = "3.1.1"
 carapace = "1.6.3"
 "aqua:dalance/procs" = "0.14.10"
 "aqua:bvaisvil/zenith" = "0.14.1"
-"aqua:rossmacarthur/sheldon" = { version = "0.8.5", postinstall = "sheldon lock"}
+"sheldon" = { version = "0.8.5", postinstall = "sheldon lock" }
 fnox = "1.20.0"
-
-# python tools
+"ni" = "30.1.0"
 python = "3.13.3"
-
-# node tools
 node = "24.0.1"
-"npm:@antfu/ni" = "24.3.0"
-
-# language runtimes
 go = "1.24.2"
 bun = "1.2.13"
 deno = "2.3.1"
