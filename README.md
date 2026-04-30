@@ -88,3 +88,13 @@ ln -sfn /path/to/dotfiles/.config ~/.config
 ```sh
 ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
 ```
+
+Local git configuration is managed separately in `.gitconfig.local`:
+
+```sh
+cat > ~/.gitconfig.local << 'EOF'
+[user]
+	email = your-email@example.com
+	name = your-name
+EOF
+```

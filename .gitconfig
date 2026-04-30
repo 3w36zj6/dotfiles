@@ -1,6 +1,3 @@
-[user]
-	email = 52315048+3w36zj6@users.noreply.github.com
-	name = 3w36zj6
 [core]
 	autocrlf = input
 	editor = vim
@@ -23,3 +20,5 @@
 	colorMoved = default
 [push]
 	default = current
+[include]
+	path = .gitconfig.local
