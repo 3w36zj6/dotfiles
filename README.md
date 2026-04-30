@@ -33,6 +33,14 @@ ln -sf /path/to/dotfiles/.aliases.sh ~/.aliases.sh
 ln -sf /path/to/dotfiles/.envs.sh ~/.envs.sh
 ```
 
+Local environment variables are managed separately in `.envs.local.sh`:
+
+```sh
+cat > ~/.envs.local.sh << 'EOF'
+export YOUR_SECRET="your-secret-value"
+EOF
+```
+
 ### Interactive tools
 
 ```sh

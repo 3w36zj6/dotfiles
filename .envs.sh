@@ -24,3 +24,9 @@ if command -v fnox >/dev/null 2>&1; then
     eval "$(fnox activate zsh)"
   fi
 fi
+
+# Local environment variables
+if [ -f "${HOME}/.envs.local.sh" ]; then
+  # shellcheck source=/dev/null
+  . "${HOME}/.envs.local.sh"
+fi
