@@ -2,70 +2,70 @@
 
 # General aliases
 alias _="sudo"
-alias mkdir="${aliases[mkdir]:-mkdir} -p"
+alias mkdir="mkdir -p"
 alias type="type -a"
 
 # Safe ops. Ask the user before doing anything destructive.
-alias cp="${aliases[cp]:-cp} -i"
-alias ln="${aliases[ln]:-ln} -i"
-alias mv="${aliases[mv]:-mv} -i"
-alias rm="${aliases[rm]:-rm} -i"
+alias cp="cp -i"
+alias ln="ln -i"
+alias mv="mv -i"
+alias rm="rm -i"
 
-alias l="ls -1A"         # Lists in one column, hidden files.
-alias ll="ls -lh"        # Lists human readable sizes.
-alias lr="ll -R"         # Lists human readable sizes, recursively.
-alias la="ll -A"         # Lists human readable sizes, hidden files.
-alias lk="ll -Sr"        # Lists sorted by size, largest last.
-alias lt="ll -tr"        # Lists sorted by date, most recent last.
+alias l="ls -1A"  # Lists in one column, hidden files.
+alias ll="ls -lh" # Lists human readable sizes.
+alias lr="ll -R"  # Lists human readable sizes, recursively.
+alias la="ll -A"  # Lists human readable sizes, hidden files.
+alias lk="ll -Sr" # Lists sorted by size, largest last.
+alias lt="ll -tr" # Lists sorted by date, most recent last.
 
 # https://github.com/lsd-rs/lsd
-if type lsd > /dev/null 2>&1; then
+if type lsd >/dev/null 2>&1; then
   alias ls="lsd"
   alias tree="lsd --tree"
 fi
 
 # https://github.com/sharkdp/bat
-if type bat > /dev/null 2>&1; then
+if type bat >/dev/null 2>&1; then
   alias cat="bat"
 fi
 
 # https://github.com/dandavison/delta
-if type delta > /dev/null 2>&1; then
+if type delta >/dev/null 2>&1; then
   alias diff="delta"
 fi
 
 # https://github.com/BurntSushi/ripgrep
-if type rg > /dev/null 2>&1; then
+if type rg >/dev/null 2>&1; then
   alias grep="rg"
 fi
 
 # https://github.com/sharkdp/fd
-if type fd > /dev/null 2>&1; then
+if type fd >/dev/null 2>&1; then
   alias find="fd"
 fi
 
 # https://github.com/dalance/procs
-if type procs > /dev/null 2>&1; then
+if type procs >/dev/null 2>&1; then
   alias ps='procs $USER --tree'
 fi
 
 # https://github.com/bootandy/dust
-if type dust > /dev/null 2>&1; then
+if type dust >/dev/null 2>&1; then
   alias du="dust"
 fi
 
 # https://github.com/ajeetdsouza/zoxide
-if type zoxide > /dev/null 2>&1; then
+if type zoxide >/dev/null 2>&1; then
   alias cd="z"
 fi
 
 # https://github.com/bvaisvil/zenith
-if type zenith > /dev/null 2>&1; then
+if type zenith >/dev/null 2>&1; then
   alias top="zenith"
 fi
 
 # https://github.com/zellij-org/zellij
-if type zellij > /dev/null 2>&1; then
+if type zellij >/dev/null 2>&1; then
   alias zj="zellij"
   alias za="zellij attach"
   alias zls="zellij list-sessions"
@@ -74,7 +74,7 @@ if type zellij > /dev/null 2>&1; then
 fi
 
 # Git
-if type git > /dev/null 2>&1; then
+if type git >/dev/null 2>&1; then
   alias g="git"
 
   # Branch (b)
@@ -237,12 +237,12 @@ if type git > /dev/null 2>&1; then
   export _git_log_oneline_format='%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n'
   export _git_log_brief_format='%C(green)%h%C(reset) %s%n%C(blue)(%ar by %an)%C(red)%d%C(reset)%n'
 
-  alias gl="git log --topo-order --pretty=format:'$_git_log_medium_format'"
-  alias gls="git log --topo-order --stat --pretty=format:'$_git_log_medium_format'"
-  alias gld="git log --topo-order --stat --patch --full-diff --pretty=format:'$_git_log_medium_format'"
-  alias glo="git log --topo-order --pretty=format:'$_git_log_oneline_format'"
-  alias glg="git log --topo-order --graph --pretty=format:'$_git_log_oneline_format'"
-  alias glb="git log --topo-order --pretty=format:'$_git_log_brief_format'"
+  gl() { git log --topo-order --pretty=format:"$_git_log_medium_format" "$@"; }
+  gls() { git log --topo-order --stat --pretty=format:"$_git_log_medium_format" "$@"; }
+  gld() { git log --topo-order --stat --patch --full-diff --pretty=format:"$_git_log_medium_format" "$@"; }
+  glo() { git log --topo-order --pretty=format:"$_git_log_oneline_format" "$@"; }
+  glg() { git log --topo-order --graph --pretty=format:"$_git_log_oneline_format" "$@"; }
+  glb() { git log --topo-order --pretty=format:"$_git_log_brief_format" "$@"; }
   alias glc="git shortlog --summary --numbered"
   alias glS="git log --show-signature"
 
@@ -316,8 +316,8 @@ if type git > /dev/null 2>&1; then
   # Working Copy (w)
   export _git_status_ignore_submodules="none"
 
-  alias gws="git status --ignore-submodules=$_git_status_ignore_submodules --short"
-  alias gwS="git status --ignore-submodules=$_git_status_ignore_submodules"
+  gws() { git status --ignore-submodules="$_git_status_ignore_submodules" --short "$@"; }
+  gwS() { git status --ignore-submodules="$_git_status_ignore_submodules" "$@"; }
   alias gwd="git diff --no-ext-diff"
   alias gwD="git diff --no-ext-diff --word-diff"
   alias gwr="git reset --soft"

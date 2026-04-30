@@ -2,6 +2,7 @@
 
 # Nix setup
 if [ -s ~/.nix-profile/etc/profile.d/nix.sh ]; then
+  # shellcheck source=/dev/null
   . ~/.nix-profile/etc/profile.d/nix.sh
 fi
 
