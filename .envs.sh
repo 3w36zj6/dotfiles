@@ -16,15 +16,6 @@ if [ -s ~/.local/bin/mise ]; then
   eval "$(mise activate --shims)"
 fi
 
-# fnox setup
-if command -v fnox >/dev/null 2>&1; then
-  if [ -n "$BASH_VERSION" ]; then
-    eval "$(fnox activate bash)"
-  elif [ -n "$ZSH_VERSION" ]; then
-    eval "$(fnox activate zsh)"
-  fi
-fi
-
 # Local environment variables
 if [ -f "${HOME}/.envs.local.sh" ]; then
   # shellcheck source=/dev/null

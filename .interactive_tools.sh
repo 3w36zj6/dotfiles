@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# fnox setup
+if command -v fnox >/dev/null 2>&1; then
+  if [ -n "$ZSH_VERSION" ]; then
+    eval "$(fnox activate zsh)"
+  elif [ -n "$BASH_VERSION" ]; then
+    eval "$(fnox activate bash)"
+  fi
+fi
+
 # zoxide setup
-if type zoxide >/dev/null 2>&1; then
+if command -v zoxide >/dev/null 2>&1; then
   if [ -n "$ZSH_VERSION" ]; then
     eval "$(zoxide init zsh)"
   elif [ -n "$BASH_VERSION" ]; then
@@ -10,7 +19,7 @@ if type zoxide >/dev/null 2>&1; then
 fi
 
 # fzf setup
-if type fzf >/dev/null 2>&1; then
+if command -v fzf >/dev/null 2>&1; then
   if [ -n "$ZSH_VERSION" ]; then
     # shellcheck source=/dev/null
     source <(fzf --zsh)
@@ -20,7 +29,7 @@ if type fzf >/dev/null 2>&1; then
 fi
 
 # carapace setup
-if type carapace >/dev/null 2>&1; then
+if command -v carapace >/dev/null 2>&1; then
   export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
   if [ -n "$ZSH_VERSION" ]; then
     zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
