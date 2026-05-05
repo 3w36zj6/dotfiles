@@ -33,6 +33,7 @@ shellcheck = "0.11.0"
 codex = "0.128.0"
 claude-code = "2.1.126"
 copilot = "1.0.40"
+just = "1.50.0"
 
 [settings]
 # plugins can read the versions files used by other version managers (if enabled by the plugin)
