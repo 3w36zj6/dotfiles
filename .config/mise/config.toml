@@ -39,3 +39,22 @@ just = "1.50.0"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
+
+[dotfiles]
+# Configurations
+"~/.config" = { source = "..", mode = "symlink" }
+"~/.gitconfig" = { source = "../../.gitconfig", mode = "symlink" }
+
+# Bash
+#"~/.bashrc" = { source = "../../.bashrc", mode = "symlink" }
+
+# Zsh
+"~/.p10k.zsh" = { source = "../../.p10k.zsh", mode = "symlink" }
+"~/.zfunc" = { source = "../../.zfunc", mode = "symlink" }
+"~/.zshenv" = { source = "../../.zshenv", mode = "symlink" }
+"~/.zshrc" = { source = "../../.zshrc", mode = "symlink" }
+
+# Common shell settings
+"~/.aliases.sh" = { source = "../../.aliases.sh", mode = "symlink" }
+"~/.envs.sh" = { source = "../../.envs.sh", mode = "symlink" }
+"~/.interactive_tools.sh" = { source = "../../.interactive_tools.sh", mode = "symlink" }
