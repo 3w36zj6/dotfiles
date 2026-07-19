@@ -80,7 +80,7 @@ curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon
 https://mise.jdx.dev/getting-started.html
 
 ```sh
-curl -fsSL https://mise.run | sh
+curl -fsSL https://mise.run | MISE_VERSION=v2026.7.7 sh
 
 ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
 ```

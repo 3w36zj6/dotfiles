@@ -5,6 +5,8 @@ import pc from "npm:picocolors@1.0.0";
 const errorText = `${pc.bold(pc.red("error"))}:`;
 // const successText = `${pc.bold(pc.green("success"))}:`;
 
+const miseVersion = "v2026.7.7";
+
 // Check requirement commands
 const requirementCommands = [
   "curl",
@@ -147,7 +149,7 @@ const isMiseInstallationConfirmed = isAllYes ||
   }));
 
 if (isMiseInstallationConfirmed) {
-  await executeInstallScript("https://mise.run");
+  await $`curl -fsSL https://mise.run | env MISE_VERSION=${miseVersion} bash`;
   await $`mise install`;
 }
 
