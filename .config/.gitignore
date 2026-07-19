@@ -4,9 +4,12 @@
 # but keep the ignore file itself
 !.gitignore
 
-# allow specific sub‑directories that we want to version
-!git/
-!mise/
-!sheldon/
-!zellij/
-!git/
+# allow traversal into subdirectories
+!*/
+
+# allow specific subdirectories that we want to version
+!git/**
+!mise/config.toml
+!mise/miserc.toml
+!sheldon/**
+!zellij/**
