@@ -1,101 +1,39 @@
 # dotfiles
 
-## Install automatically
+## Prerequisites
+
+- curl
+- git
+
+## Bootstrap with mise
+
+- https://mise.en.dev/getting-started.html
+- https://mise.en.dev/bootstrap.html
 
 ```sh
+curl -fsSL https://mise.run | MISE_VERSION=v2026.7.7 sh
+
 git clone git@github.com:3w36zj6/dotfiles.git
 cd dotfiles
 
-# If you use x86_64-unknown-linux-gnu
-wget https://3w36zj6.github.io/dotfiles/setup_x86_64-unknown-linux-gnu
-chmod +x setup_x86_64-unknown-linux-gnu
-./setup_x86_64-unknown-linux-gnu
-
-# If you use aarch64-apple-darwin
-wget https://3w36zj6.github.io/dotfiles/setup_aarch64-apple-darwin
-chmod +x setup_aarch64-apple-darwin
-./setup_aarch64-apple-darwin
+MISE_GLOBAL_CONFIG_FILE=".config/mise/config.toml" "$HOME/.local/bin/mise" bootstrap --force-dotfiles
 
 # Restart shell
 ```
 
-## Install manually
+## Post-bootstrap configuration
 
-### Aliases
-
-```sh
-ln -sf /path/to/dotfiles/.aliases.sh ~/.aliases.sh
-```
-
-### Environment variables
-
-```sh
-ln -sf /path/to/dotfiles/.envs.sh ~/.envs.sh
-```
+### Local environment variables
 
 Local environment variables are managed separately in `.envs.local.sh`:
 
 ```sh
 cat > ~/.envs.local.sh << 'EOF'
-export YOUR_SECRET="your-secret-value"
+export YOUR_VARIABLE="your-value"
 EOF
 ```
 
-### Interactive tools
-
-```sh
-ln -sf /path/to/dotfiles/.interactive_tools.sh ~/.interactive_tools.sh
-```
-
-### Bash + bash-completion
-
-```sh
-ln -sf /path/to/dotfiles/.bashrc ~/.bashrc
-
-# bash-completion
-git clone --depth 1 https://github.com/scop/bash-completion.git /usr/share/bash-completion
-```
-
-### Zsh + Powerlevel10k
-
-```sh
-ln -sf /path/to/dotfiles/.zshrc ~/.zshrc
-ln -sf /path/to/dotfiles/.zshenv ~/.zshenv
-ln -sfn /path/to/dotfiles/.zfunc ~/.zfunc
-
-# Powerlevel10k
-ln -sf /path/to/dotfiles/.p10k.zsh ~/.p10k.zsh
-```
-
-### Nix
-
-https://nix.dev/manual/nix/latest/installation/installing-binary
-
-```sh
-curl -fsSL https://nixos.org/nix/install | sh -s -- --no-daemon
-```
-
-### mise
-
-https://mise.jdx.dev/getting-started.html
-
-```sh
-curl -fsSL https://mise.run | MISE_VERSION=v2026.7.7 sh
-
-ln -sfn /path/to/dotfiles/.config/mise ~/.config/mise
-```
-
-### Configurations
-
-```sh
-ln -sfn /path/to/dotfiles/.config ~/.config
-```
-
-#### Git
-
-```sh
-ln -sf /path/to/dotfiles/.gitconfig ~/.gitconfig
-```
+### Local Git configuration
 
 Local git configuration is managed separately in `.gitconfig.local`:
 
