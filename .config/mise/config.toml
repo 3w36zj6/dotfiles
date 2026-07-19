@@ -41,6 +41,7 @@ codex = "0.144.4"
 claude-code = "2.1.126"
 copilot = "1.0.40"
 just = "1.50.0"
+usage = "3.2.0"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
