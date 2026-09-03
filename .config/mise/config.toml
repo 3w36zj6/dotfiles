@@ -44,6 +44,7 @@ just = "1.50.0"
 usage = "6.6.1"
 ghq = "1.10.1"
 apm = "0.29.0"
+herdr = "0.8.2"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
