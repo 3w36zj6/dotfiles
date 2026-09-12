@@ -43,7 +43,7 @@ copilot = "1.0.40"
 just = "1.50.0"
 usage = "6.6.1"
 ghq = "1.10.1"
-apm = "0.29.0"
+apm = { version = "0.29.0", postinstall = "apm install --global --frozen" }
 herdr = "0.8.2"
 
 [settings]
@@ -53,6 +53,8 @@ idiomatic_version_file_enable_tools = ["node"]
 # Configurations
 "~/.config" = { source = "..", mode = "symlink" }
 "~/.gitconfig" = { source = "../../.gitconfig", mode = "symlink" }
+"~/.apm/apm.yml" = { source = "../../.apm/apm.yml", mode = "symlink" }
+"~/.apm/apm.lock.yaml" = { source = "../../.apm/apm.lock.yaml", mode = "symlink" }
 
 # Bash
 #"~/.bashrc" = { source = "../../.bashrc", mode = "symlink" }

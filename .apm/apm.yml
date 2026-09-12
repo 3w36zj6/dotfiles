@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://microsoft.github.io/apm/specs/schemas/manifest-v0.1.schema.json
+name: global
+version: 1.0.0
+targets:
+  - codex
+  - claude
+dependencies:
+  apm:
+    - DietrichGebert/ponytail#v4.9.0
+includes: auto
