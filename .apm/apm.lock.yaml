@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-09-25T14:39:57.911921+00:00'
+generated_at: '2026-09-25T14:42:51.505823+00:00'
 apm_version: 0.29.0
 dependencies:
 - repo_url: dietrichgebert/ponytail
@@ -79,6 +79,21 @@ dependencies:
     .codex/hooks/ponytail/hooks/ponytail-statusline.sh: sha256:f1dbfa5997a5d4b5339619709053eff557ab16d71af75eb3041c3d3e3dca42ec
     .codex/hooks/ponytail/hooks/ponytail-subagent.js: sha256:7f6bee86702a488d29ef0dcaabf424bbe2aca345a6a642319d43a1fe0276792e
   content_hash: sha256:cf663b30a6b47b2d349a5efdab76b32090a3b05733ac6a814d6cf6e835dc7102
+- repo_url: k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  name: japanese-tech-writing
+  host: gist.github.com
+  resolved_commit: 8f2d57610a73efc97d743c9b0b0ecb1002e09fa4
+  version: unknown
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/fd287c3133457c4fd8f5601d34aa817d
+  - .agents/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md
+  - .claude/skills/fd287c3133457c4fd8f5601d34aa817d
+  - .claude/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md: sha256:ad350e0e6f5630fd94d8ab98a6aee194053b0096fdc944c23e271d6dfa09ee68
+    .claude/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md: sha256:ad350e0e6f5630fd94d8ab98a6aee194053b0096fdc944c23e271d6dfa09ee68
+  content_hash: sha256:9ddea7db32f38a243da9ff3c08f19fa1f4eb39f9cc27f3a966842cfb323376f3
 deployments:
 - kind: project-relative
   target: claude
@@ -134,6 +149,24 @@ deployments:
   - dietrichgebert/ponytail
   active_owner: dietrichgebert/ponytail
   content_hash: sha256:7f6bee86702a488d29ef0dcaabf424bbe2aca345a6a642319d43a1fe0276792e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fd287c3133457c4fd8f5601d34aa817d
+  runtime: null
+  scope: project
+  owners:
+  - gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  active_owner: gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  active_owner: gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  content_hash: sha256:ad350e0e6f5630fd94d8ab98a6aee194053b0096fdc944c23e271d6dfa09ee68
 - kind: project-relative
   target: claude
   value: .claude/skills/ponytail
@@ -242,6 +275,24 @@ deployments:
   - dietrichgebert/ponytail
   active_owner: dietrichgebert/ponytail
   content_hash: sha256:1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2
+- kind: project-relative
+  target: codex
+  value: .agents/skills/fd287c3133457c4fd8f5601d34aa817d
+  runtime: null
+  scope: project
+  owners:
+  - gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  active_owner: gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/fd287c3133457c4fd8f5601d34aa817d/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  active_owner: gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d
+  content_hash: sha256:ad350e0e6f5630fd94d8ab98a6aee194053b0096fdc944c23e271d6dfa09ee68
 - kind: project-relative
   target: codex
   value: .agents/skills/ponytail
