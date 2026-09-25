@@ -44,11 +44,6 @@ if type fd >/dev/null 2>&1; then
   alias find="fd"
 fi
 
-# https://github.com/dalance/procs
-if type procs >/dev/null 2>&1; then
-  alias ps='procs $USER --tree'
-fi
-
 # https://github.com/bootandy/dust
 if type dust >/dev/null 2>&1; then
   alias du="dust"
@@ -57,20 +52,6 @@ fi
 # https://github.com/ajeetdsouza/zoxide
 if type zoxide >/dev/null 2>&1; then
   alias cd="z"
-fi
-
-# https://github.com/bvaisvil/zenith
-if type zenith >/dev/null 2>&1; then
-  alias top="zenith"
-fi
-
-# https://github.com/zellij-org/zellij
-if type zellij >/dev/null 2>&1; then
-  alias zj="zellij"
-  alias za="zellij attach"
-  alias zls="zellij list-sessions"
-  alias zk="zellij kill-session"
-  alias zka="zellij kill-all-sessions"
 fi
 
 # Git
