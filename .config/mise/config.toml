@@ -38,6 +38,7 @@ just = "1.50.0"
 ghq = "1.10.1"
 apm = { version = "0.29.0", postinstall = "apm install --global --frozen" }
 herdr = "0.8.2"
+agent-browser = "0.38.1"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
