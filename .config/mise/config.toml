@@ -1,4 +1,4 @@
-min_version = "2026.7.7"
+min_version = "2026.8.15"
 
 [bootstrap.packages]
 "apt:bash-completion" = "latest"
@@ -47,7 +47,7 @@ idiomatic_version_file_enable_tools = ["node"]
 
 [dotfiles]
 # Configurations
-"~/.config" = { source = "..", mode = "symlink" }
+"~/.config" = { source = "..", mode = "symlink-each", manifest = "git" }
 "~/.gitconfig" = { source = "../../.gitconfig", mode = "symlink" }
 "~/.apm/apm.yml" = { source = "../../.apm/apm.yml", mode = "symlink" }
 "~/.apm/apm.lock.yaml" = { source = "../../.apm/apm.lock.yaml", mode = "symlink" }
