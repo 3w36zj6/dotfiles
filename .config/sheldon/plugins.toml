@@ -34,7 +34,6 @@ github = "romkatv/powerlevel10k"
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-apply = ["defer"]
 
 # For example:
 #
