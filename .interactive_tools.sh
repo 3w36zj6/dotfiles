@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# mise setup
+if [ -s ~/.local/bin/mise ]; then
+  if [ -n "$ZSH_VERSION" ]; then
+    eval "$(~/.local/bin/mise activate zsh)"
+  elif [ -n "$BASH_VERSION" ]; then
+    eval "$(~/.local/bin/mise activate bash)"
+  fi
+fi
+
 # fnox setup
 if command -v fnox >/dev/null 2>&1; then
   if [ -n "$ZSH_VERSION" ]; then
