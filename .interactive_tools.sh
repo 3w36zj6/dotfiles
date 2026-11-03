@@ -46,3 +46,12 @@ if command -v carapace >/dev/null 2>&1; then
   # shellcheck source=/dev/null
   source <(carapace _carapace)
 fi
+
+# starship setup
+if command -v starship >/dev/null 2>&1; then
+  if [ -n "$ZSH_VERSION" ]; then
+    eval "$(starship init zsh)"
+  elif [ -n "$BASH_VERSION" ]; then
+    eval "$(starship init bash)"
+  fi
+fi

@@ -12,4 +12,5 @@
 !mise/config.toml
 !mise/miserc.toml
 !sheldon/**
+!starship.toml
 !zellij/**
