@@ -13,10 +13,10 @@ alias rm="rm -i"
 
 alias l="ls -1A"  # Lists in one column, hidden files.
 alias ll="ls -lh" # Lists human readable sizes.
-alias lr="ll -R"  # Lists human readable sizes, recursively.
-alias la="ll -A"  # Lists human readable sizes, hidden files.
-alias lk="ll -Sr" # Lists sorted by size, largest last.
-alias lt="ll -tr" # Lists sorted by date, most recent last.
+alias lr="ls -lh -R"  # Lists human readable sizes, recursively.
+alias la="ls -lh -A"  # Lists human readable sizes, hidden files.
+alias lk="ls -lh -Sr" # Lists sorted by size, largest last.
+alias lt="ls -lh -tr" # Lists sorted by date, most recent last.
 
 # https://github.com/lsd-rs/lsd
 if type lsd >/dev/null 2>&1; then
