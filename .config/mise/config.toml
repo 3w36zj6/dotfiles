@@ -51,8 +51,8 @@ idiomatic_version_file_enable_tools = ["node"]
 # Configurations
 "~/.config" = { source = "..", mode = "symlink-each", manifest = "git" }
 "~/.gitconfig" = { source = "../../.gitconfig", mode = "symlink" }
-"~/.apm/apm.yml" = { source = "../../.apm/apm.yml", mode = "symlink" }
-"~/.apm/apm.lock.yaml" = { source = "../../.apm/apm.lock.yaml", mode = "symlink" }
+# APM replaces apm.lock.yaml and breaks file symlinks, so link the whole directory.
+"~/.apm" = { source = "../../.apm", mode = "symlink" }
 
 # Bash
 #"~/.bashrc" = { source = "../../.bashrc", mode = "symlink" }
