@@ -44,6 +44,7 @@ jq = "1.8.2"
 jj = "0.45.1"
 
 [settings]
+activate_aggressive = true
 idiomatic_version_file_enable_tools = ["node"]
 
 [dotfiles]
