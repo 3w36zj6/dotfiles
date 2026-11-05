@@ -58,7 +58,7 @@ idiomatic_version_file_enable_tools = ["node"]
 #"~/.bashrc" = { source = "../../.bashrc", mode = "symlink" }
 
 # Zsh
-"~/.zfunc" = { source = "../../.zfunc", mode = "symlink" }
+"~/.zfunc" = { source = "../../.zfunc", mode = "symlink-each", manifest = "git" }
 "~/.zshenv" = { source = "../../.zshenv", mode = "symlink" }
 "~/.zshrc" = { source = "../../.zshrc", mode = "symlink" }
 
