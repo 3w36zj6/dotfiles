@@ -31,7 +31,6 @@ $conda\
 $pixi\
 $nix_shell\
 $direnv\
-$mise\
 [](fg:sapphire bg:lavender)\
 $time\
 [ ](fg:lavender)\
@@ -217,16 +216,11 @@ format = "[ $symbol$loaded/$allowed ]($style)"
 style = "fg:crust bg:sapphire"
 disabled = false
 
-[mise]
-style = "fg:crust bg:sapphire"
-format = "[ $symbol$health ]($style)"
-disabled = false
-
 [time]
 disabled = false
 time_format = "%H:%M:%S"
 style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 [line_break]
 disabled = false
